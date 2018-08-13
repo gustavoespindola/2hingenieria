@@ -8845,6 +8845,9 @@ body h6 {
 .hero .btn {
   color: white !important;
 }
+.hero h1 {
+  font-weight: normal;
+}
 .btn {
   background-color: #FFC107;
   border: 1px solid #ffc107;
@@ -8876,5 +8879,56 @@ section.benefits svg {
   max-height: 90px;
   display: block;
   margin-bottom: 30px;
-  fill: #9E9E9E;
+  fill: mediumseagreen;
+}
+.gradient-overlay:before {
+  z-index: 0 !important;
+}
+.service svg {
+  max-width: 50px;
+  margin: 0 auto 2rem;
+  display: block;
+  fill: rebeccapurple;
+}
+.products .product img {
+  max-width: 320px;
+  margin: 0 auto;
+  display: block;
+  padding: 1rem;
+}
+.guarantee {
+  background-color: #08AEEA;
+  background-image: -webkit-linear-gradient(90deg, #08aeea -100%, #2af598 200%);
+  background-image: -moz-linear-gradient(90deg, #08aeea -100%, #2af598 200%);
+  background-image: -o-linear-gradient(90deg, #08aeea -100%, #2af598 200%);
+  background-image: linear-gradient(90deg, #08aeea -100%, #2af598 200%);
+}
+@media (max-width: 480px) {
+  .jumbotron h1 {
+    font-size: 2rem;
+    line-height: 1.1;
+    text-align: center;
+  }
+  h6.block-title.m-b-20.text-white {
+    text-align: center;
+  }
+  p.text-white {
+    font-size: 1rem;
+    text-align: center;
+  }
+  a.btn.btn-primary.btn-lg.btn-rounded {
+    max-width: 100%;
+    padding: 1rem 0;
+    min-width: 100%;
+    margin-top: .5rem;
+  }
+  .bottom-right p {
+    text-align: center !important;
+    width: 100%;
+    margin: 0;
+  }
+  .bottom-right {
+    width: 100%;
+    padding: 20px !important;
+  }
 }
