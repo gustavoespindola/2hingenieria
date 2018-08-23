@@ -396,21 +396,29 @@
                         <div class="col-sm-6">
                             <div class="form-group form-group-default">
                                 <label class="control-label">Nombre</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group form-group-default">
                                 <label class="control-label">Apellido</label>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="form-group form-group-default">
+                                <label class="control-label">Correo Electrónico</label>
+                                <input type="email" class="form-control" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group form-group-default">
                         <label class="control-label">Mensaje</label>
-                        <textarea class="form-control" style="height:100px" placeholder="Redacta tu motivo de consulta"></textarea>
+                        <textarea class="form-control" style="height:100px;" placeholder="Redacta tu motivo de consulta" required></textarea>
                     </div>
-                    <p class="pull-left  small hint-text m-t-5 font-arial sm-m-t-10" style="max-width: 320px;">Por la presente certifico que la información anterior es verdadera y precisa.</p>
+                    <p class="pull-left  small hint-text m-t-5 font-arial sm-m-t-10" style="max-width: 320px;">Por la presente certifico que la información anterior es verdadera y precisa.</p><div data-netlify-recaptcha></div>
                     <button type="submit" class="btn btn-round btn-lg text-white all-caps fs-11 pull-right sm-m-t-10 btn-cta">Contactar experto</button>
                     <div class="clearfix"></div>
                 </form>
