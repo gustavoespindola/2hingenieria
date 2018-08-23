@@ -367,22 +367,19 @@
             </div>
         </div>
     </section>
-    <!-- START CONTACT SECTION -->
+    <!-- CONTACT SECTION -->
+    <a name="experto" ></a>
     <section id="experto" class="container container-fixed-lg p-t-70 p-b-80  sm-p-t-30 sm-p-b-30">
         <div class="row">
             <div class="col-md-5">
                 <div class="row">
                     <div class="col-sm-6 col-md-12">
-                        <a name="experto" ></a>
-                        <h4>2H Ingeniería expertos en <br>uso eficiente de aire <br>comprimido.</h4>
+                        <img src="assets/images/2hingenieria__logotype-02.png" alt="" style=" max-width: 80px; float: left; vertical-align: top; ">
+                        <h4 style=" float: left; margin: -7px 0 0px 10px; ">Expertos en <br>uso eficiente de aire <br>comprimido.</h4>
                     </div>
                     <div class="col-sm-6 col-md-12">
                         <br class="visible-md visible-xs">
-                        <h5 class="block-title hint-text m-b-0">2H Ingeniería</h5>
-                        <address class="text-master m-t-5">Avenida sucre 2680
-                            <br> Ñuñoa - Santiago
-                            <br> Chile.
-                            <br> +56 9 9182 7317
+                        <address class="text-master m-t-5">Avenida sucre 2680 Ñuñoa, Santiago. <br>Contacto +56 9 9182 7317
                         </address>
                     </div>
                 </div>
@@ -390,7 +387,7 @@
             <div class="col-md-7">
                 <br class=" visible-xs">
                 <br class="visible-xs">
-                <h4 class="sm-m-t-20">Cotización Gratuita</h4>
+                <h4 class="m-t-0 sm-m-t-20">Cotización Gratuita</h4>
                 <form id="form" class="form" role="form" name="contact" method="POST" netlify>
                     <div class="row">
                         <div class="col-sm-6">
@@ -486,8 +483,9 @@
           e.preventDefault();
 
           var $form = $(this);
+          var $name = $('.username').text();
           $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Thank you!");
+            alert("Gracias! Tu menaje ha sido enviado");
           });
         });
 
