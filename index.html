@@ -391,32 +391,38 @@
                 <br class=" visible-xs">
                 <br class="visible-xs">
                 <h4 class="sm-m-t-20">Cotización Gratuita</h4>
-                <form class="" role="form" name="contact" method="POST" netlify>
+                <form id="form" class="form" role="form" name="contact" method="POST" netlify>
                     <div class="row">
                         <div class="col-sm-6">
                             <div class="form-group form-group-default">
                                 <label class="control-label">Nombre</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="Nombre" class="form-control" required>
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="form-group form-group-default">
                                 <label class="control-label">Apellido</label>
-                                <input type="text" class="form-control" required>
+                                <input type="text" name="Apellido" class="form-control" required>
                             </div>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-sm-12">
+                        <div class="col-sm-6">
                             <div class="form-group form-group-default">
                                 <label class="control-label">Correo Electrónico</label>
-                                <input type="email" class="form-control" required>
+                                <input type="email" name="email" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="form-group form-group-default">
+                                <label class="control-label">Empresa</label>
+                                <input type="text" name="Empresa" class="form-control" required>
                             </div>
                         </div>
                     </div>
                     <div class="form-group form-group-default">
                         <label class="control-label">Mensaje</label>
-                        <textarea class="form-control" style="height:100px;" placeholder="Redacta tu motivo de consulta" required></textarea>
+                        <textarea class="form-control" style="height:100px;" placeholder="Redacta tu motivo de consulta" name="Mensaje" required></textarea>
                     </div>
                     <p class="pull-left  small hint-text m-t-5 font-arial sm-m-t-10" style="max-width: 320px;">Por la presente certifico que la información anterior es verdadera y precisa.</p><div data-netlify-recaptcha></div>
                     <button type="submit" class="btn btn-round btn-lg text-white all-caps fs-11 pull-right sm-m-t-10 btn-cta">Contactar experto</button>
@@ -474,6 +480,15 @@
 
         $("#goto").click(function() {
            scrollToAnchor('experto');
+        });
+
+        $("#form").submit(function(e) {
+          e.preventDefault();
+
+          var $form = $(this);
+          $.post($form.attr("action"), $form.serialize()).then(function() {
+            alert("Thank you!");
+          });
         });
 
     </script>
