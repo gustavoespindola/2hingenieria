@@ -483,9 +483,9 @@
           e.preventDefault();
 
           var $form = $(this);
-          var $name = $('.username').text();
+          var $username = $('.username').text();
           $.post($form.attr("action"), $form.serialize()).then(function() {
-            alert("Gracias! Tu menaje ha sido enviado");
+            alert("Gracias "+$username+"! recibimos tu mensaje. En menos de 24hrs. estaremos conversando. ");
           });
         });
 
